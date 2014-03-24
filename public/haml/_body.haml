@@ -1,0 +1,51 @@
+.row.contain-to-grid#menu
+  .small-3.columns
+    %select#section.createSeats
+      %option Create Seats
+      %option{value: '#genAdmission'} General Admission
+      %option{value: '#vip'} VIP
+  .small-1.columns
+    %input#amount.createSeats{type: 'text', placeholder: '500'}
+  .small-1.columns
+    %input#cost.createSeats{type: 'text', placeholder: '$100'}
+  .small-2.columns
+    %input#createButton.createSeats.button.small.radius{type: 'button', value: 'Create Seats'}
+  .small-2.columns.small-offset-3
+    %input#name{type: 'text', placeholder: 'Enter Name'}
+.row#stageRow
+  .small-12.columns
+    #stage
+.row
+  .small-12.columns#vip
+.row
+  .small-12.columns#genAdmission
+#left
+  %h5 Totals
+  .total
+    Total VIP:
+    %span#vipTotal $0.00
+  .total
+    Total GA:
+    %span#genAdmissionTotal $0.00
+  .total
+    Grand Total:
+    %span#grandTotal $0.00
+  .total
+    VIP People:
+    %span#vipPeople 0
+  .total
+    GA People:
+    %span#gaPeople 0
+  .total
+    Total People:
+    %span#totalPeople 0
+#right
+  %h5 Seat List
+  #vipList
+    .listTitle VIP
+    .peopleList
+    .clear
+  #genAdmissionList
+    .listTitle GA
+    .peopleList
+    .clear
